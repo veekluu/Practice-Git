@@ -1,0 +1,39 @@
+1. Starting a Repository 
+git init: Initializes a new local Git repository in the current directory.
+git clone <url>: Copies an existing remote repository to your local machine.
+git config: Sets configuration options like username and email (--global). 
+2. Basic Snapshotting (Staging & Committing) 
+git status: Shows the state of the working directory and staging area (files changed, added, or deleted).
+git add <file>: Adds file changes in your working directory to the staging area.
+git add .: Stages all changed or new files.
+git commit -m "<message>": Records the staged snapshots in the repository history with a descriptive message.
+git commit -am "<message>": Stages all tracked files and commits them in one step. 
+3. Branching and Merging
+git branch: Lists, creates, or deletes local branches.
+git branch <branch-name>: Creates a new branch.
+git checkout <branch-name>: Switches to the specified branch.
+git checkout -b <branch-name>: Creates a new branch and immediately switches to it.
+git merge <branch-name>: Merges the specified branch into the current branch.
+git branch -d <branch-name>: Deletes the specified branch. 
+4. Sharing and Updating (Remote Repositories)
+git remote add <alias> <url>: Connects your local repository to a remote server.
+git fetch: Downloads all branches and commits from the remote repository without merging them.
+git pull: Fetches changes from the remote and merges them into the current local branch.
+git push <alias> <branch-name>: Uploads local commits to the remote repository. 
+5. Reviewing History and Inspecting
+git log: Displays the commit history for the current branch.
+git log --oneline: Shows the commit history in a condensed, one-line format.
+git diff: Shows changes between commits, commit and working tree, etc..
+git blame <file>: Shows who changed what and when in a specific file. 
+6. Undoing Changes
+git reset --hard <commit>: Resets the current branch to a specific commit, destroying all changes made afterward.
+git revert <commit>: Creates a new commit that undoes the changes of a previous commit.
+git restore --staged <file>: Removes a file from the staging area but keeps the changes in the working directory.
+git clean -f: Removes untracked files. 
+7. Temporary Storage (Stashing) 
+git stash: Temporarily saves uncommitted changes (both staged and unstaged) to work on something else.
+git stash pop: Re-applies the most recently stashed changes and removes them from the stash list.
+git stash list: Lists all stashed changes. 
+8. Rewriting History
+git rebase <branch>: Reapplies commits from the current branch on top of another base tip.
+git commit --amend: Modifies the most recent commit (e.g., to fix a typo in the message or add forgotten files). 
